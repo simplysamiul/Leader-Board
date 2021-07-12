@@ -5,12 +5,15 @@ body{
 }
 main{
     display:flex;
-    justify-content:center;
+    flex-direction:column;
+    align-items:center;
 }
 .container{
     background-color:#ffff;
     width: 870px;
     padding:10px 30px 40px 30px;
+    margin-top: 22px;
+    border-radius:10px;
 }
 /* top players */
 .top-players{
@@ -46,12 +49,18 @@ hr{
 .blog-section{
     margin-top:40px;
 }
+.blogs{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 20px 30px;
+}
 .blog{
     display:flex;
 }
 .thumbnail img{
     width:177px;
     height:117px;
+    transition:0.5s;
 }
 .blog-info{
     margin-left:16px;
@@ -66,4 +75,91 @@ hr{
 .blog-info a{
     text-decoration:none;
     color:#562EFF;
+}
+/* Course area */
+.courses{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 0 25px;
+}
+.course{
+    width:250px;
+    box-shadow: 0 0 20px 5px rgb(242, 240, 240);
+    padding: 10px;
+    border-radius:20px;
+}
+.course-banner img{
+    width:100%;
+}
+.course-title{
+    font-size:20px;
+}
+.course-info{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+}
+.fa-star.filled{
+    color:#FFC014;
+}
+.fa-star.empty{
+    color:#AEAEAE;
+    font-size:12px;
+}
+.course-duration p{
+    color: #f53047;
+    background-color:#f0c1c6d9;
+    padding:8px 8px;
+    border-radius:20px;
+}
+.course-duration i{
+    margin-right: 10px;
+}
+
+/* ------------------------
+    Media Query 
+----------------------------*/
+/* Mobile Device */
+@media only screen and (max-width:800px){
+    /* Players area */
+    .section-title{
+        text-align: center;
+        font-size:35px;
+        border-bottom: 5px solid lightgray;
+        padding-bottom: 15px;
+    }
+    .container{
+        width:100%;
+    }
+    .players{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .player{
+        flex-direction: column;
+        align-items: center;
+    }
+    hr{
+        display:none;
+    }
+
+    /* blogs area */
+    .blogs{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .blog{
+        flex-direction: column;
+        align-items: center;
+    }
+    .blog-info .blog-author{
+        text-align: center;
+    }
+    /* Courses area */
+    .courses{
+        grid-template-columns: repeat(1,1fr);
+        grid-gap:40px 0;
+    }
+    .course{
+        width:75%;
+        margin: 0 auto;
+    }
 }
