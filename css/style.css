@@ -1,0 +1,35 @@
+/* --- Ulities--- */
+body{
+    font-family: 'Poppins', sans-serif;
+    background:#F3F1FF;
+}
+main{
+    display:flex;
+    justify-content:center;
+}
+.container{
+    background-color:#ffff;
+    width: 870px;
+    padding:33px 30px 40px 30px;
+}
+/* top players */
+.section-title{
+    color: #562EFF;
+    font-size:24px;
+}
+.players{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 30px 0;
+}
+.player{
+    display:flex;
+    align-items:center;
+}
+.player-name{
+    margin-left:16px;
+}
+.player img{
+    width:56px;
+    height: 56px;
+}
